@@ -1,0 +1,29 @@
+{
+  "name": "factory-mate-consumer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/App.js",
+  "scripts": {
+    "test": "karma start",
+    "compile": "tsc",
+    "start": "node dist/App.js"
+  },
+  "author": "Ryan Waskiewicz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/rwaskiewicz/FactoryMateConsumer"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.47",
+    "jasmine": "^2.6.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.31",
+    "karma-typescript": "^3.0.1",
+    "tslint": "^5.4.2",
+    "typescript": "^2.4.0"
+  }
+}
