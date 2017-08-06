@@ -3,6 +3,7 @@ import { GroceryItem } from '../domain/GroceryItem';
 export class GroceryItemBuilderService {
     public retrieveGroceryItem(): GroceryItem {
         const grocery = new GroceryItem();
+        grocery.id = Math.floor(Math.random() * 1000);
         grocery.groceryName = this.generateSnackName();
         return grocery;
     }

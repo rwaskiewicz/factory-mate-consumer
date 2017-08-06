@@ -27,15 +27,17 @@ describe('CartBuilderService', () => {
     expect(cart[0].groceryName).toBe('chewy cookies');
   });
 
-  it('overrides an item with the name chunky cookies', () => {
+  it('overrides an item with the name chunky cookies and an ID of 23', () => {
     const groceryItem: GroceryItem = FactoryMate.build(GroceryItem.name,
       (u: GroceryItem) => {
+        u.id = 23;
         u.groceryName = 'chunky cookies';
       });
     mockGroceryBuilderService.retrieveGroceryItem.and.returnValue(groceryItem);
 
     const cart = cartBuilderService.buildRandomCart();
 
+    expect(cart[0].id).toBe(23);
     expect(cart[0].groceryName).toBe('chunky cookies');
   });
 
@@ -44,5 +46,10 @@ describe('CartBuilderService', () => {
 
     expect(groceryItems.length).toBe(3);
     expect(groceryItems[2]).not.toBeUndefined();
+
+    let expectedId = 3;
+    groceryItems.forEach((groceryItem: GroceryItem) => {
+      expect(groceryItem.id).toBe(expectedId++);
+    });
   });
 });

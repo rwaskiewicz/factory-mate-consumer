@@ -1,3 +1,4 @@
 export class GroceryItem {
-    public groceryName = '';
+    public id: number;
+    public groceryName: string;
 }
