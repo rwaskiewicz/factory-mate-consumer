@@ -24,5 +24,12 @@ export class GroceryItemFactory {
             groceryItem.groceryName = providedValueGenerator.nextValue();
             return groceryItem;
         });
+
+        FactoryMate.defineWithName(GroceryItem, 'specialGroceryItem', (): GroceryItem => {
+            const groceryItem = new GroceryItem();
+            groceryItem.id = 9999;
+            groceryItem.groceryName = 'Limited Edition Chips';
+            return groceryItem;
+        });
     }
 }

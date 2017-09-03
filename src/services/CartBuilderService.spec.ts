@@ -27,6 +27,16 @@ describe('CartBuilderService', () => {
 
       expect(cart[0].groceryName).toBe('chewy cookies');
     });
+
+    it('receives a special item declared by name', () => {
+      const groceryItem: GroceryItem = FactoryMate.build('specialGroceryItem');
+      mockGroceryBuilderService.retrieveGroceryItem.and.returnValue(groceryItem);
+
+      const cart = cartBuilderService.buildRandomCart();
+
+      expect(cart[0].id).toBe(9999);
+      expect(cart[0].groceryName).toBe('Limited Edition Chips');
+    });
   });
 
   describe('Overriding properties', () => {

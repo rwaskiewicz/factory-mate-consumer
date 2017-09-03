@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@types/jasmine": "^2.5.47",
+    "factory-mate": "^1.3.0",
     "jasmine": "^2.6.0",
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.1.1",
