@@ -1,4 +1,4 @@
 export class GroceryItem {
-    public id: number;
-    public groceryName: string;
+  public id: number;
+  public groceryName: string;
 }
